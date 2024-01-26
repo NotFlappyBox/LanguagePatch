@@ -28,9 +28,8 @@ function patch() {
   for (let i of patchNames) {
     if (names.indexOf(i[0]) != -1 && i[0] != "") {
       let index = getAllIndexes(names, i[0]);
-      
       for (let j of index) {
-        if (patchedData.items[j].japaneseText != '1区' && patchedData.items[j].japaneseText != '2区' && patchedData.items[j].japaneseText != '3区' && patchedData.items[j].japaneseText != '4区' && patchedData.items[j].japaneseText != '5区' && patchedData.items[j].japaneseText != 'AIどん' && patchedData.items[j].japaneseText != '段位道場') {
+        if (i[0] != '1区' && i[0] != '2区' && i[0] != '3区' && i[0] != '4区' && i[0] != '5区' && i[0] != 'AIどん' && i[0] != '段位道場') {
           if (i[1] != "") {
             patchedData.items[j].englishUsText = i[1];
             patchedData.items[j].englishUsFontType = i[2];
