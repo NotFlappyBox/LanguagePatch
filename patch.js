@@ -30,21 +30,23 @@ function patch() {
       let index = getAllIndexes(names, i[0]);
       
       for (let j of index) {
-        if (i[1] != "") {
-          patchedData.items[j].englishUsText = i[1];
-          patchedData.items[j].englishUsFontType = i[2];
-        }
-        if (i[3] != "") {
-          patchedData.items[j].chineseTText = i[3];
-          patchedData.items[j].chineseTFontType = i[4];
-        }
-        if (i[5] != "") {
-          patchedData.items[j].koreanText = i[5];
-          patchedData.items[j].koreanFontType = i[6];
-        }
-        if (i[7] != "") {
-          patchedData.items[j].chineseSText = i[7];
-          patchedData.items[j].chineseSFontType = i[8];
+        if (patchedData.items[j].japaneseText != '1区' && patchedData.items[j].japaneseText != '2区' && patchedData.items[j].japaneseText != '3区' && patchedData.items[j].japaneseText != '4区' && patchedData.items[j].japaneseText != '5区' && patchedData.items[j].japaneseText != 'AIどん') {
+          if (i[1] != "") {
+            patchedData.items[j].englishUsText = i[1];
+            patchedData.items[j].englishUsFontType = i[2];
+          }
+          if (i[3] != "") {
+            patchedData.items[j].chineseTText = i[3];
+            patchedData.items[j].chineseTFontType = i[4];
+          }
+          if (i[5] != "") {
+            patchedData.items[j].koreanText = i[5];
+            patchedData.items[j].koreanFontType = i[6];
+          }
+          if (i[7] != "") {
+            patchedData.items[j].chineseSText = i[7];
+            patchedData.items[j].chineseSFontType = i[8];
+          }
         }
       }
     }
